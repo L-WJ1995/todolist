@@ -4,10 +4,14 @@
   margin:0;
 }
 html,body{
-  height: 100%;
   width: 100%;
+  
+}
+
+html{
   background-color: rgba(0,0,0,.02);
 }
+
 hr {
   margin: 20px 0;
   border: 0;
@@ -174,6 +178,7 @@ footer em {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  position: relative;
   flex-direction:column;
   align-items:center;
   width: 100%;
@@ -194,13 +199,13 @@ footer em {
   font-size: 0;
   width: 550px;
   height: 66px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid black;
+  box-shadow:0 0px 30px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1), inset 0 -3px 5px rgba(0,0,0,0.03);
   background-color: rgba(255, 255, 255, .9);
 }
 
 .input > span:first-child {
   display: inline-block;
+  visibility:hidden;
   font-size: 25px;
   height: 66px;
   width: 66px;
@@ -212,11 +217,9 @@ footer em {
 
 .input input {
   outline: none;
-  height: 100%;
+  height: 80%;
   border: none;
   font-size: 25px;
-  vertical-align: top;
-  height: 100%;
   width: calc(100% - 66px);
 }
 
@@ -236,4 +239,138 @@ footer em {
     width: calc(100% - 280px);
     margin-left: 280px;
   }
+}
+
+.clone{
+  box-shadow:  0 50px 80px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 550px;
+  font-size: 23.9px;
+  line-height: 35px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: none;
+  border-bottom: 1px solid #ededed;
+  align-items: center;
+  word-break:break-all;
+  background-color: white;
+}
+
+.clone div{
+  cursor: pointer;
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 15px;
+  background-image: url(X.png);
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-position: center;
+}
+
+.clone:hover div {
+  display: block;
+}
+
+.clone .reinput{
+  height: 50px;
+  font-size: 25px;
+  outline: none;
+  border: 1px solid black;
+  background-color: white;
+  width: calc(100% - 69px);
+  margin:0 3px 0 66px;
+  padding-right: 32px;
+  box-shadow:inset 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.clone > span:nth-of-type(1){
+  line-height: 66px;
+  width: 66px;
+  height: 66px;
+  flex-shrink:0;
+  text-align: center;
+}
+
+.clone  span:nth-of-type(2){
+  display: block;
+  padding-right: 32px;
+  flex-grow: 1;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.clone span:nth-of-type(1) span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33px;
+  height: 33px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 50%;
+}
+
+.tick_on {
+  background-image: url(gou.png);
+  background-position: center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.todos .clone .line_through {
+  text-decoration:line-through;
+  color:#d9d9d9;
+  transition: .3s;
+}
+
+.tail {
+  position: absolute;
+  display: none;
+  line-height: 37px;
+  text-align: center;
+  font-size: 13.5px;
+  color: rgb(119, 119, 119);
+  z-index: 1000;
+  position: absolute;
+  height: 37px;
+  width: 550px;
+  bottom: -37px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow:  0 50px 80px 0 rgba(0, 0, 0, 0.1),
+               0 10px 0 -5px #f6f6f6, 
+               0 9px 1px -3px rgba(0, 0, 0, 0.1), 
+               0 16px 0 -6px #f6f6f6, 
+               0 17px 2px -6px rgba(0, 0, 0, 0.1), 
+               0 20px 30px .5px rgba(0, 0, 0, 0.1);
+}
+
+.tail a {
+  padding: 2px 8px;
+  margin:0 5px; 
+  border: 1px solid rgba(255,255,255,0);
+  color: rgb(119, 119, 119);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.tail .item {
+  position: absolute;
+  left:20px;
+}
+
+.tail .clear_completed {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+.tail a:nth-of-type(1){
+  border-color:orange;
+}
+
+.tail a:hover {
+  border-color:orange;
 }

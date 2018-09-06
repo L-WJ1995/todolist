@@ -36,9 +36,26 @@
             <li> <a href="https://github.com/vuejs/Discussion/issues">Discussions on GitHub</a> </li>
         </ul>
         <footer>
-            <hr> <em>If you have other helpful links to share, or find any of the links above no longer work, please <a href="https://github.com/tastejs/todomvc/issues">let us know</a>.</em> 
+            <hr> 
+            <em>If you have other helpful links to share, or find any of the links above no longer work, please <a href="https://github.com/tastejs/todomvc/issues">let us know</a>.
+            </em> 
         </footer>
     </aside>
+    <div class="todos">
+      <span>todos</span>
+      <div class="input">
+        <span>❯</span>
+        <input type="text" autofocus="autofocus" autocomplete="off" placeholder="What needs to be done?" class="keydown">
+      </div>
+      <div class="clone"><div class="X"></div><span><span class="tick"></span></span><span></span></div>
+      <div class="tail">
+        <span class="item">0</span>
+        <a class="all" href="#All">All</a>
+        <a class="active" href="#Active">Active</a>
+        <a class="completed" href="#Completed">Completed</a>
+        <span class="clear_completed">Clear completed</span>
+      </div>
+    </div>
     <script type="text/javascript" src="todolist.js"></script>
 </body>
 
