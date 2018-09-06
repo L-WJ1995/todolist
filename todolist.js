@@ -18,10 +18,6 @@ document.addEventListener('numchange', () => {
   }
 });
 
-
-
-
-
 document.addEventListener("keydown", (e) =>  {
   if (e.target.className === "keydown" && e.keyCode === 13 && e.target.value !== "") {
     let node = document.body.querySelector(".clone").cloneNode(true)
