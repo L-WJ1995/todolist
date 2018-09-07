@@ -19,7 +19,7 @@
 
 ### 修改：    
 增加localStorage:    
-* 通过localStorage实现本地缓存,页面加载开始读取localStorage的local_notes属性并继续宁解析,根据解析对象生成相应的DOM对象,中间涉及渲染闪烁的问题、生成DOM对象的逻辑.同时页面内.todos主体内的DOM元素有所变动时(即开头所提的交互事件),实时更新localStorage的local_notes属性,实际生产中实时更新可以最大限度避免页面崩溃、浏览器卡死等引起的localStorage数据缺失。
+* 通过localStorage实现本地缓存,页面加载开始读取localStorage的local_notes属性并进行解析,根据解析对象生成相应的DOM对象,中间涉及渲染闪烁的问题、生成DOM对象的逻辑.同时页面内.todos主体内的DOM元素有所变动时(即开头所提的交互事件),实时更新localStorage的local_notes属性,实际生产中实时更新可以最大限度避免页面崩溃、浏览器卡死等引起的localStorage数据缺失。
   
 
 
