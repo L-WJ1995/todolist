@@ -295,7 +295,7 @@ footer em {
   text-align: center;
 }
 
-.clone  span:nth-of-type(2){
+.clone  .question{
   display: block;
   padding-right: 32px;
   flex-grow: 1;
