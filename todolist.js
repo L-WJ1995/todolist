@@ -142,6 +142,7 @@ function tick(node) {       //选择标签函数
     if (node.classList.contains("tick_on")) {
       node.classList.remove("tick_on")
       update_localStorage(4, [node.parentNode.parentNode, false])
+      if (!document.querySelector(".tick_on")) tailNode.querySelector(".clear_completed").style.display = "none"
       node.parentNode.parentNode.lastChild.classList.remove("line_through")
       tailNode.firstElementChild.textContent = /^[0-9]*/.exec(tailNode.firstElementChild.textContent)[0] - 0 + 1 + " item left"
       if (!init_status)  clone_status()
