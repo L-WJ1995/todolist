@@ -265,7 +265,7 @@ footer em {
   height: 18px;
   position: absolute;
   right: 15px;
-  background-image: url(./picture/X.png);
+  background-image: url(../picture/X.png);
   -webkit-background-size: 100%;
   background-size: 100%;
   background-position: center;
@@ -313,7 +313,7 @@ footer em {
 }
 
 .tick_on {
-  background-image: url(./picture/gou.png);
+  background-image: url(../picture/gou.png);
   background-position: center;
   -webkit-background-size: 100%;
   background-size: 100%;
